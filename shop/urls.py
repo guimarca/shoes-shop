@@ -23,5 +23,6 @@ router = DefaultRouter()
 router.register(r"api/product", views.ProductViewSet)
 
 urlpatterns = [
+    path("api/repository-updates", views.RepositoryUpdate.as_view(), name="RepositoryUpdate"),
     path("", include(router.urls)),
 ]

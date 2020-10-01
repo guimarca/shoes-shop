@@ -61,11 +61,9 @@ class Order(TimeStampedModel):
     def send_email(self):
         csv_file = self.to_csv_file()
         email = EmailMessage(
-            subject=f"Order: {self.id}",
-            body=self.to_html(),
-            to=[self.customer.email]
+            subject=f"Order: {self.id}", body=self.to_html(), to=[self.customer.email]
         )
-        email.content_subtype = 'html'
+        email.content_subtype = "html"
         email.attach_file(csv_file)
         email.send()
         #   os.remove(csv_file)
