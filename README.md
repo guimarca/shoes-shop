@@ -1,6 +1,6 @@
-# Servers admin
+# Shoes shop
 
-Servers management admin + REST API using Django +  Django REST.
+Shoes shop + REST API using Django +  Django REST.
 
 ## Setup
 
@@ -17,7 +17,6 @@ For python 3.6+
 ## Usage
 
 1. Login in the admin site with your admin user credentials: `http://localhost:8080/admin`
-1. (optional) Create user(s)
 1. Create a Token for Users you want to give access to the API
 1. Check the API documentation here: `http://localhost:8080/swagger/`
 1. Make API requests with the following header: `Authorization: Token {YOUR_USER_TOKEN}`
