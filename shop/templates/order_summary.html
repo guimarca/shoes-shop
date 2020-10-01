@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order summary</title>
+</head>
+<body>
+
+<h1>Order: {{ order.id }}</h1>
+
+created: {{ order.created }} - submitted: {{ now }}
+<br>
+<br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>total amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order_product in order_products %}
+        <tr>
+            <td>{{ order_product.product.id }}</td>
+            <td>{{ order_product.product.name }}</td>
+            <td>{{ order_product.product.price }}</td>
+            <td>{{ order_product.quantity }}</td>
+            <td>{{ order_product.total_amount }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Total amount: {{ order.total_amount }}€</h3>
+
+</body>
+</html>

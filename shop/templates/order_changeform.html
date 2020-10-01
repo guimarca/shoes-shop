@@ -8,3 +8,13 @@
         <br>
     </div>
 {% endblock %}
+
+{% block submit_buttons_bottom %}
+    {% if not original.shipped %}
+    <div class="submit-row">
+        <input type="hidden" name="order_id" value="{{ original.id }}">
+        <input type="submit" value="Ship now" class="default" name="_ship" onclick="return confirm('Are you sure?')">
+    </div>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

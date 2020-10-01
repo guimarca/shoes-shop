@@ -28,3 +28,5 @@ pytest-report.xml
 coverage.xml
 htmlcov
 *.sqlite3
+order_files/*.csv
+emails/**
